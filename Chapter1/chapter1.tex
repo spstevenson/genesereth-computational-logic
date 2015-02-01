@@ -1,0 +1,46 @@
+\documentclass{article}
+
+\begin{document}
+
+\section*{Exercises}
+
+\begin{enumerate}
+	\item \emph{Blocks World.} The premises in the Blocks World problem at the beginning of this chapter
+	are not complete. The problem assumes some things about the world that are not explicitly recorded there.
+	Write out some of these implicit assumptions as sentences in English.
+	
+	\begin{itemize}
+		\item Each block may only have one block stacked directly on top of it (ie. no more than one block may be
+			at one level).
+			
+		\item Each block must be ontop of another block, except the bottom block, which is on the table.
+		
+		\item There exists only one of each colour block.
+		
+		\item There exists only one tower of blocks.
+	\end{itemize}
+	
+	\item \emph{Propositional Resolution.} Consider the problem of Mary, Pat and Quincy given earlier.
+	\begin{enumerate}
+		\item Encode  the assumption that Mary loves one of Pat or Quincy but not both. (Hint: the
+			sentence $p \Rightarrow$ means that $p$ is false.)
+			
+			$$p \wedge q \Rightarrow $$
+			
+		\item Using this additional assumpition, use propositional resolution to prove that, if it is Monday and
+			raining, then Mary does not love Pat.
+			
+			$$p  \Rightarrow q$$
+			$$m \wedge r \Rightarrow p \vee q$$
+			
+			Gives
+			
+			$$m \wedge r \Rightarrow q$$
+			
+			Using propositional resolution with $p \wedge q \Rightarrow$ gives
+			
+			$$p \wedge m \wedge r \Rightarrow$$
+	\end{enumerate}
+	
+\end{enumerate}
+\end{document}
