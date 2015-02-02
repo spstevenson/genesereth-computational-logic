@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\begin{document}
+\section*{Exercises}
+
+\begin{enumerate}
+	\item \emph{Syntax}. Say whether each of the following is a sentence of Propositional Logic.
+	\begin{enumerate}
+		\item $p \wedge \neg p$
+
+			Yes
+		\item $\neg p \vee \neg p$
+
+			Yes
+
+		\item $\neg (q \vee r) \neg q \Rightarrow \neg\neg p$
+
+			This is not a sentence in propositional logic. There is no operator between $\neg(q \vee r)$ and $\neg q$.
+
+		\item $(p \vee q) \wedge (r \vee q)$
+
+			Yes
+
+		\item $p \vee \neg q \wedge \neg p \vee \neg q \Rightarrow p \vee q$
+
+			Yes
+
+		\item $( p \Rightarrow q) \vdash (q \Leftarrow p)$
+
+			No, the $\vdash$ operator is not a valid operator in propositional logic.
+
+		\item $(p \Rightarrow q) \models (q \Leftarrow p)$
+
+			No, the $\models$ operator is not a valid operator in propositional logic.
+
+		\item $((p \Rightarrow q) \Rightarrow s) \Leftrightarrow (r \Leftarrow t)$
+
+			Yes.
+
+		\item $((p \Leftrightarrow q) \Leftrightarrow s) \Leftrightarrow ( r \Leftrightarrow t)$
+
+			Yes.
+
+		\item This $\vee$ is $\neg$ correct.
+
+			No, the $\neg$ operator is unary and there is no operator between \emph{This $\vee$ is} and \emph{$\neg$ correct}.
+	\end{enumerate}
+	\item \emph{Translation.} Consider a propositional language with three propositional constants -- \emph{purple, mushroom, poisonous} --
+		each indicating the propert suggested by its spelling. Using these propositional constants, encode the following English sentences
+		in propositional logic.
+
+
+	\begin{enumerate}
+		\item If a mushroom is purple, it is poisonous.
+
+			P = Mushroom is purple
+
+			T = Mushroom is poisonous
+
+			$P \Rightarrow T$
+	\end{enumerate}
+\end{enumerate}
+\end{document}
