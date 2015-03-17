@@ -67,7 +67,78 @@
 
 		\item A mushroom is not poisonous unless it is purple.
 
+			$m \wedge \neg p \Rightarrow m \wedge \neg t$
+			
+		\item A mushroom is poisonous if and only if it is purple
+		
+			$m \wedge t \Leftrightarrow m \wedge p$
 			
 	\end{enumerate}
+	
+	\item \emph{Validity, Satisfiability, Unsatisfiability.} For each of the following sentences, indicate
+		whether it is valid, satisfiable or unsatifiable.
+		
+		\begin{enumerate}
+			\item $( p \Rightarrow q) \vee (q \Rightarrow p)$
+			
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					$p$ & $q$ & $p \Rightarrow q$ & $q \Rightarrow p$ & $( p \Rightarrow q) \vee (q \Rightarrow p)$\\
+					\hline
+					F & F &  T & T & T\\
+					\hline
+					F & T & T & F & T\\
+					\hline
+					T & F & F & T & T\\
+					\hline
+					T & T & T & T & T\\
+					\hline
+				\end{tabular}
+				
+			This sentence is \emph{valid}.
+			
+			\item $p \wedge (p \Rightarrow \neg q) \wedge q$
+			
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					$p$ & $q$ & $\neg q$ & $p \Rightarrow \neg q$ & $p \wedge (p \Rightarrow \neg q) \wedge q$\\
+					\hline
+					T & T & F & F & F\\
+					\hline
+					T & F & T & T & F\\
+					\hline
+					F & T & F & T & F\\
+					\hline
+					F & F & T & T & F\\
+					\hline
+				\end{tabular}
+				
+				This sentence is \emph{unsatisfiable}.
+				
+			\item $(p \Rightarrow ( q \wedge r)) \Leftrightarrow (p \Rightarrow q) \wedge (p \Rightarrow r)$
+			
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					$p$ & $q$ & $r$ & $q \wedge r$ & $p \Rightarrow (q \wedge r)$ & $p \Rightarrow q$ 
+					& $p \Rightarrow r$ \\
+					\hline
+					T & T & T & T & T & T\\
+					\hline
+					T & T & F & F & F & T\\
+					\hline
+					T & F & T & F & F & F\\
+					\hline
+					T & F & F & F & F & F\\
+					\hline
+					F & T & T & T & T & T\\
+					\hline
+					F & T & F & F & T & T\\
+					\hline
+					F & F & T & F & T & T\\
+					\hline
+					F & F & F & F & T & T\\
+					\hline
+				\end{tabular}
+		\end{enumerate}
 \end{enumerate}
 \end{document}
