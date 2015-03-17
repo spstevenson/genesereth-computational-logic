@@ -117,28 +117,76 @@
 				
 			\item $(p \Rightarrow ( q \wedge r)) \Leftrightarrow (p \Rightarrow q) \wedge (p \Rightarrow r)$
 			
-				\begin{tabular}{|c|c|c|c|c|c|c|}
+				\begin{tabular}{|c|c|c|c|c|c|c|c|}
 					\hline
 					$p$ & $q$ & $r$ & $q \wedge r$ & $p \Rightarrow (q \wedge r)$ & $p \Rightarrow q$ 
-					& $p \Rightarrow r$ \\
+					& $p \Rightarrow r$ & $ (p \Rightarrow q) \wedge (p \Rightarrow r)$\\
 					\hline
-					T & T & T & T & T & T\\
+					T & T & T & T & T & T & T & T\\
 					\hline
-					T & T & F & F & F & T\\
+					T & T & F & F & F & T & F & F\\
 					\hline
-					T & F & T & F & F & F\\
+					T & F & T & F & F & F & T & F\\
 					\hline
-					T & F & F & F & F & F\\
+					T & F & F & F & F & F & F & F\\
 					\hline
-					F & T & T & T & T & T\\
+					F & T & T & T & T & T & T & T\\
 					\hline
-					F & T & F & F & T & T\\
+					F & T & F & F & T & T & T & T\\
 					\hline
-					F & F & T & F & T & T\\
+					F & F & T & F & T & T & T & T\\
 					\hline
-					F & F & F & F & T & T\\
+					F & F & F & F & T & T & T & T \\
 					\hline
 				\end{tabular}
+
+				\begin{tabular}{|c|}
+					\hline
+					 $(p \Rightarrow ( q \wedge r)) \Leftrightarrow (p \Rightarrow q) \wedge (p \Rightarrow r)$ \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline
+				\end{tabular}
+
+				This sentence is \emph{valid}.
+
+				\item $(p \Rightarrow (q \Rightarrow r)) \Rightarrow ((p \wedge q) \Rightarrow r)$
+
+					\begin{tabular}{|c|c|c|c|c|c|}
+						\hline
+						$p$ & $q$ & $r$ & $q \Rightarrow r$ & $p \wedge q$ & $p \Rightarrow (q \Rightarrow r)$\\
+						\hline
+						T & T & T & T & T & T\\
+						\hline 
+						T & T & F & F & T & F\\
+						\hline
+						T & F & T & T & F & T\\
+						\hline
+						T & F & F & T & F & T\\
+						\hline
+						F & T & T & T & F & T\\
+						\hline
+						F & T & F & F & F & T\\
+						\hline
+						F & F & T & T & F & T\\
+						\hline
+						F & F & F & T & F & T\\
+						\hline
+					\end{tabular}
 		\end{enumerate}
 \end{enumerate}
 \end{document}
