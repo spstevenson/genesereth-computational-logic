@@ -187,6 +187,42 @@
 						F & F & F & T & F & T\\
 						\hline
 					\end{tabular}
+
+				\item $(p \Rightarrow q) \wedge ( p \Rightarrow \neg q)$
+
+					\begin{tabular}{|c|c|c|c|c|c|}
+						\hline
+						$p$ & $q$ & $\neg q$ & $p \Rightarrow q$ & $p \Rightarrow \neg q$ 
+						& $(p \Rightarrow q) \wedge ( p \Rightarrow \neg q)$ \\
+						\hline
+						T & T & F & T & F & F\\
+						\hline
+						T & F & T & F & T & F\\
+						\hline
+						F & T & F & T & T & T\\
+						\hline
+						F & F & T & T & T & T\\
+						\hline
+					\end{tabular}
+
+					This sentence is \emph{satisfiable}.
+
+				\item $(\neg p \vee \neg q) \Rightarrow \neg (p \wedge q)$
+
+					\begin{enumerate}{|c|c|}
+						\hline
+						$p$ & $q$ \\
+						\hline
+						T & T \\
+						\hline
+						T & F \\
+						\hline
+						F & T \\
+						\hline
+						F & F \\
+						\hline
+
+					\end{enumerate}
 		\end{enumerate}
 \end{enumerate}
 \end{document}
