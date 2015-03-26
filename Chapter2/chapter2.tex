@@ -120,15 +120,15 @@
 				\begin{tabular}{|c|c|c|c|c|c|c|c|}
 					\hline
 					$p$ & $q$ & $r$ & $q \wedge r$ & $p \Rightarrow (q \wedge r)$ & $p \Rightarrow q$ 
-					& $p \Rightarrow r$ & $ (p \Rightarrow q) \wedge (p \Rightarrow r)$\\
+					& $p \Rightarrow r$ X\\
 					\hline
-					T & T & T & T & T & T & T & T\\
+					T & T & T & T & T & T & T \\
 					\hline
-					T & T & F & F & F & T & F & F\\
+					T & T & F & F & F & T & F &\\
 					\hline
-					T & F & T & F & F & F & T & F\\
+					T & F & T & F & F & F & T & \\
 					\hline
-					T & F & F & F & F & F & F & F\\
+					T & F & F & F & F & F & F & \\
 					\hline
 					F & T & T & T & T & T & T & T\\
 					\hline
@@ -140,17 +140,18 @@
 					\hline
 				\end{tabular}
 
-				\begin{tabular}{|c|}
+				\begin{tabular}{|c|c|}
 					\hline
+					$(p \Rightarrow q) \wedge ( p \Rightarrow \neg q)$ &
 					 $(p \Rightarrow ( q \wedge r)) \Leftrightarrow (p \Rightarrow q) \wedge (p \Rightarrow r)$ \\
 					\hline
-					T \\
+					T & T \\
 					\hline
-					T \\
+					F & T \\
 					\hline
-					T \\
+					F & T \\
 					\hline
-					T \\
+					F & T \\
 					\hline
 					T \\
 					\hline
@@ -209,20 +210,23 @@
 
 				\item $(\neg p \vee \neg q) \Rightarrow \neg (p \wedge q)$
 
-					\begin{enumerate}{|c|c|}
+					\begin{tabular}{|c|c|c|c|c|c|c|c|}
 						\hline
-						$p$ & $q$ \\
+						$p$ & $q$ & $\neg p$ & $\neg q$ & $(\neg p \vee \neg q)$ & $p \wedge q$ & $\neg(p \wedge q)$ &
+						$(\neg p \vee \neg q) \Rightarrow \neg (p \wedge q)$\\
 						\hline
-						T & T \\
+						T & T & F & F & F & T & F & T\\
 						\hline
-						T & F \\
+						T & F & F & T & T & F & T & T\\
 						\hline
-						F & T \\
+						F & T & T & F & T & F & T & T\\
 						\hline
-						F & F \\
+						F & F & T & T & T & F & T & T\\
 						\hline
 
-					\end{enumerate}
+					\end{tabular}
+
+					This sentence is \emph{valid}.
 		\end{enumerate}
 \end{enumerate}
 \end{document}
