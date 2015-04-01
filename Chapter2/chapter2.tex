@@ -227,6 +227,38 @@
 					\end{tabular}
 
 					This sentence is \emph{valid}.
+			\item $(( \neg p \Rightarrow \neg q) \Rightarrow (\neg q \Rightarrow p)) \wedge (p \vee q)$
+
+				\begin{tabular}{|c|c|c|c|c|c|c|c|}
+					\hline
+					$p$ & $q$ & $\neg p$ & $ \neg q$ & $ \neg p \wedge \neg q $ & $ \neg q \Rightarrow p $ &
+					$( \neg p \Rightarrow \neg q) \Rightarrow (\neg q \Rightarrow p)$ & $(p \vee q)$\\
+					\hline
+					T & T & F & F & T & T & T & T\\
+					\hline
+					T & F & F & T & T & T & T & T\\
+					\hline
+					F & T & T & F & F & T & T & T\\
+					\hline
+					F & F & T & T & T & F & F & F\\
+					\hline
+				\end{tabular}
+
+				\begin{tabular}{|c|}
+					\hline
+					$(( \neg p \Rightarrow \neg q) \Rightarrow (\neg q \Rightarrow p)) \wedge (p \vee q)$ \\
+					\hline
+					T \\
+					\hline
+					T \\
+					\hline 
+					T \\
+					\hline
+					F \\
+					\hline
+				\end{tabular}
+
+				This sentence is \emph{satisfiable.}
 		\end{enumerate}
 \end{enumerate}
 \end{document}
