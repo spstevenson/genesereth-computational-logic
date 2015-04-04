@@ -259,6 +259,64 @@
 				\end{tabular}
 
 				This sentence is \emph{satisfiable.}
+			\item $((\neg p \vee q) \Rightarrow (q \wedge ( p \Leftrightarrow q))$
+			
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					$p$ & $ q$ & $\neg p$ & $\neg p \vee q$ & 
+					$p \Leftrightarrow q$ & $q \wedge (p \Leftrightarrow q)$ & 
+					$((\neg p \vee q) \Rightarrow (q \wedge ( p \Leftrightarrow q))$ \\
+					\hline
+					T & T & F & T & T & T & T\\
+					\hline
+					T & F & F & F & F & F & T\\
+					\hline
+					F & T & T& T & F & F & F\\
+					\hline
+					F & F & T & T & T & F & F\\
+					\hline
+				\end{tabular}
+				This sentence is \emph{satisfiable}.
+			
+			\item $((\neg r \Rightarrow \neg p \wedge \neg q) \vee s) \Leftrightarrow (p \wedge q \Rightarrow r \vee s)$
+			
+				\begin{tabular}{|c|c|c|c|c|c|c|}
+					\hline
+					$p$ & $q$ & $r$ & $s$ & $\neg p$ & $\neg q$ & $\neg r$\\
+					\hline
+					T & T & T & T & F & F & F\\
+					\hline
+					T & T & T  & F & F & F & F\\
+					\hline
+					T & T & F & T & F & F & T\\
+					\hline
+					T & T & F & F & F & F & T\\
+					\hline
+					T & F & T & T & F & T & F\\
+					\hline
+					T & F & T & F & F & T  & F\\
+					\hline
+					T & F & F & T & F & T & T\\
+					\hline
+					T & F & F & F & F & T & T\\
+					\hline
+					F & T & T & T & T & T & F\\
+					\hline
+					F & T & T & F & T & T & F\\
+					\hline
+					F & T & F & T & T & F & T\\
+					\hline
+					F & T & F & F & T & F & T\\
+					\hline 
+					F & F & T & T & T & T & F\\
+					\hline
+					F & F & T & F & T & T & F\\
+					\hline
+					F & F & F & T & T & T & T\\
+					\hline
+					F & F & F & F & T & T & T\\
+					\hline
+				\end{tabular}
 		\end{enumerate}
 \end{enumerate}
 \end{document}
