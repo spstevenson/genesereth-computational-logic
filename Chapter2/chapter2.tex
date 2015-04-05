@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\usepackage[document]{ragged2e}
+
 \begin{document}
 \section*{Exercises}
 
@@ -280,43 +282,138 @@
 			
 			\item $((\neg r \Rightarrow \neg p \wedge \neg q) \vee s) \Leftrightarrow (p \wedge q \Rightarrow r \vee s)$
 			
-				\begin{tabular}{|c|c|c|c|c|c|c|}
+				\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 					\hline
-					$p$ & $q$ & $r$ & $s$ & $\neg p$ & $\neg q$ & $\neg r$\\
+					$p$ & $q$ & $r$ & $s$ & $\neg p$ & $\neg q$ & $\neg r$ & $\neg p \wedge \neg q$ &
+					$(\neg r \Rightarrow \neg p \wedge \neg q)$\\
 					\hline
-					T & T & T & T & F & F & F\\
+					T & T & T & T & F & F & F & F & T\\
 					\hline
-					T & T & T  & F & F & F & F\\
+					T & T & T  & F & F & F & F & F & T\\
 					\hline
-					T & T & F & T & F & F & T\\
+					T & T & F & T & F & F & T & F & F\\
 					\hline
-					T & T & F & F & F & F & T\\
+					T & T & F & F & F & F & T & F & F\\
 					\hline
-					T & F & T & T & F & T & F\\
+					T & F & T & T & F & T & F & F & T\\
 					\hline
-					T & F & T & F & F & T  & F\\
+					T & F & T & F & F & T  & F & F & T\\
 					\hline
-					T & F & F & T & F & T & T\\
+					T & F & F & T & F & T & T & F & F\\
 					\hline
-					T & F & F & F & F & T & T\\
+					T & F & F & F & F & T & T & F & F\\
 					\hline
-					F & T & T & T & T & T & F\\
+					F & T & T & T & T & F & F & F & T\\
 					\hline
-					F & T & T & F & T & T & F\\
+					F & T & T & F & T & F & F & F & T\\
 					\hline
-					F & T & F & T & T & F & T\\
+					F & T & F & T & T & F & T & F & F\\
 					\hline
-					F & T & F & F & T & F & T\\
+					F & T & F & F & T & F & T & F & F\\
 					\hline 
-					F & F & T & T & T & T & F\\
+					F & F & T & T & T & T & F & T & T\\
 					\hline
-					F & F & T & F & T & T & F\\
+					F & F & T & F & T & T & F & T & T\\
 					\hline
-					F & F & F & T & T & T & T\\
+					F & F & F & T & T & T & T & T & T\\
 					\hline
-					F & F & F & F & T & T & T\\
+					F & F & F & F & T & T & T & T & T\\
 					\hline
 				\end{tabular}
+				{
+				\centering
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					$(\neg r \Rightarrow \neg p \wedge \neg q) \vee s$ & $p \wedge q$ & $r \vee s$ &
+					$ (p \wedge q \Rightarrow r \vee s)$ 
+					& $((\neg r \Rightarrow \neg p \wedge \neg q) \vee s) \Leftrightarrow (p \wedge q \Rightarrow r \vee s)$\\
+					\hline
+					T & T & T & T & T\\
+					\hline
+					T  & T & T & T & T\\
+					\hline
+					T & T & T & T & T\\
+					\hline
+					F & T & F & F & T\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					F & F & F & T & F\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					F & F & F & T & F\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					T & F & T & T & T\\
+					\hline
+					T & F & F & T & T\\
+					\hline
+				\end{tabular}
+			}
+			
+			This sentence is \emph{satisfiable}.
+
+		\item $(p \wedge ( q \Rightarrow r)) \Rightarrow (( \neg p \vee q) \Rightarrow ( p \wedge r))$
+		
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline
+				$p$ & $q$ & $r$ & $q \Rightarrow r$ & $(p \wedge ( q \Rightarrow r))$ & $\neg p$ & $\neg p \vee q$
+				& $p \wedge r$\\
+				\hline
+				T & T & T & T & T & F & T & T\\
+				\hline
+				T & T & F & F & F & F & T & F\\
+				\hline
+				T & F & T & T & T & F & F & T\\
+				\hline
+				T & F & F & T & T & F & F & F\\
+				\hline
+				F & T & T & T & F & T & T & F\\
+				\hline
+				F & T & F & F & F & T & T & F\\
+				\hline
+				F & F & T & T & F & T & T & F\\
+				\hline
+				F & F & F & T & F & T & T & F\\
+				\hline
+			\end{tabular}
+			
+			\begin{tabular}{|c|c|}
+				\hline
+				$ (( \neg p \vee q) \Rightarrow ( p \wedge r))$ 
+				& $(p \wedge ( q \Rightarrow r)) \Rightarrow (( \neg p \vee q) \Rightarrow ( p \wedge r))$\\
+				\hline
+				T & T\\
+				\hline
+				F & T\\
+				\hline
+				T & T\\
+				\hline
+				T & T\\
+				\hline
+				F & T\\
+				\hline
+				F & T\\
+				\hline
+				F & T\\
+				\hline
+				F & T\\
+				\hline
+			\end{tabular}
 		\end{enumerate}
+		
+		This sentence is \emph{valid}.
 \end{enumerate}
 \end{document}
